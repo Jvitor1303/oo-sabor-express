@@ -1,7 +1,7 @@
 class Restaurante: 
     nome = ''
     categoria = '' 
-    atvo = False 
+    ativo = False 
 
 restaurante_pizza = Restaurante() 
 restaurante_macarrao = Restaurante() 
