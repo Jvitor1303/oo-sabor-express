@@ -3,8 +3,8 @@ class Restaurante:
 
 
     def __init__(self, nome, categoria):
-        self.nome = nome
-        self.categoria = categoria 
+        self.nome = nome.title()
+        self.categoria = categoria.title() 
         self._ativo = False  
         Restaurante.restaurantes.append(self)
     
@@ -21,7 +21,7 @@ class Restaurante:
     def ativo(self): 
         return '✅' if self._ativo else '❌ '
 
-restaurante_pizza = Restaurante('Pizzaria do Papaléguas', 'Italiana') 
+restaurante_pizza = Restaurante('pizzaria do papaléguas', 'italiana') 
 
 restaurante_macarrao = Restaurante('Macarronada da Dna. Joana', 'Massas em geral') 
 
