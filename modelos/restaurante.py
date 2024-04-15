@@ -5,7 +5,7 @@ class Restaurante:
     def __init__(self, nome, categoria):
         self.nome = nome
         self.categoria = categoria 
-        self.ativo = False  
+        self._ativo = False  
         Restaurante.restaurantes.append(self)
     
     def __str__(self): 
@@ -13,13 +13,13 @@ class Restaurante:
     
     def listar_restaurantes(): 
         for restaurante in Restaurante.restaurantes: 
-            print(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}') 
+            print(f'{restaurante.nome.ljust(25)} | {restaurante.categoria.ljust(25)} | {restaurante.ativo}') 
     @property 
     def ativo(self): 
-        return '✅' if self.ativo else '❌'
+        return '✅' if self._ativo else '❌ '
 
 restaurante_pizza = Restaurante('Pizzaria do Papaléguas', 'Italiana') 
- 
+
 restaurante_macarrao = Restaurante('Macarronada da Dna. Joana', 'Massas em geral') 
 
 Restaurante.listar_restaurantes()
