@@ -13,7 +13,10 @@ class Restaurante:
     
     def listar_restaurantes(): 
         for restaurante in Restaurante.restaurantes: 
-            print(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}')
+            print(f'{restaurante.nome} | {restaurante.categoria} | {restaurante.ativo}') 
+    @property 
+    def ativo(self): 
+        return '' if self.ativo else ''
 
 restaurante_pizza = Restaurante('Pizzaria do Papaléguas', 'Italiana') 
  
