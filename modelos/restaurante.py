@@ -3,8 +3,8 @@ class Restaurante:
 
 
     def __init__(self, nome, categoria):
-        self.nome = nome.title()
-        self.categoria = categoria.title() 
+        self._nome = nome.title()
+        self._categoria = categoria.title() 
         self._ativo = False  
         Restaurante.restaurantes.append(self)
     
@@ -16,7 +16,7 @@ class Restaurante:
         print(f'{'Nome do restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Status'}') 
         print()
         for restaurante in Restaurante.restaurantes: 
-            print(f'{restaurante.nome.ljust(25)} | {restaurante.categoria.ljust(25)} | {restaurante.ativo}') 
+            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {restaurante.ativo}') 
     @property 
     def ativo(self): 
         return '✅' if self._ativo else '❌ '
