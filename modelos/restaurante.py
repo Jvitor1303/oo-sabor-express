@@ -21,7 +21,7 @@ class Restaurante:
     @property 
     def ativo(self): 
         return '✅' if self._ativo else '❌ '
-
+#instância é a 'variável' que atribuimos á classe. Essas duas variáveis são instâncias da classe Restaurante
 restaurante_pizza = Restaurante('pizzaria do papaléguas', 'italiana') 
 
 restaurante_macarrao = Restaurante('Macarronada da Dna. Joana', 'Massas em geral') 
