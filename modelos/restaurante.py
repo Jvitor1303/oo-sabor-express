@@ -27,8 +27,11 @@ class Restaurante:
         return '✅' if self._ativo else '❌ ' 
     
     def alternar_estado(self): 
-        self._ativo = not self._ativo 
+        self._ativo = not self._ativo  
 
+    def receber_avaliacao(self, cliente, nota): 
+        avaliacao = Avaliacao(cliente, nota)
+        self._avaliacao.append(avaliacao)
     
 
 
