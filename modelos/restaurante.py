@@ -1,3 +1,6 @@
+from modelos.avaliacao import Avaliacao
+
+
 class Restaurante:  
     restaurantes = []
 
@@ -5,7 +8,8 @@ class Restaurante:
     def __init__(self, nome, categoria):
         self._nome = nome.title()
         self._categoria = categoria.title() 
-        self._ativo = False  
+        self._ativo = False 
+        self._avaliacao = []  
         Restaurante.restaurantes.append(self)
     
     def __str__(self): 
@@ -23,6 +27,8 @@ class Restaurante:
         return '✅' if self._ativo else '❌ ' 
     
     def alternar_estado(self): 
-        self._ativo = not self._ativo
+        self._ativo = not self._ativo 
+
+    
 
 
