@@ -21,7 +21,7 @@ class Restaurante:
         print(f'{'Nome do restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Avaliação'.ljust(25)} | {'Status'}') 
         print()
         for restaurante in cls.restaurantes: 
-            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante._media_avaliacoes).ljust(25)} | {restaurante.ativo}') 
+            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante.media_avaliacoes).ljust(25)} | {restaurante.ativo}') 
     @property 
     def ativo(self): 
         return '✅' if self._ativo else '❌ ' 
@@ -36,7 +36,7 @@ class Restaurante:
     @property
     def media_avaliacoes(self):
         if not self._avaliacao: 
-            return 0 
+            return '-' 
         soma_das_notas = sum(avaliacao.nota for avaliacao in self._avaliacao)
         quantidade_de_notas = len(self._avaliacao) 
         media = round(soma_das_notas / quantidade_de_notas,1) 

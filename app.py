@@ -8,7 +8,6 @@ restaurante_praca.receber_avaliacao('Iguinho Brioche', 1)
 restaurante_praca.receber_avaliacao('Neide', 9) 
 
 
-restaurante_praca.alternar_estado()
 
 def main():
     Restaurante.listar_restaurantes()
