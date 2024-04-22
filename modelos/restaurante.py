@@ -26,9 +26,3 @@ class Restaurante:
         self._ativo = not self._ativo
 
 
-#instância é a 'variável' que atribuimos á classe. Essas duas variáveis são instâncias da classe Restaurante
-restaurante_pizza = Restaurante('pizzaria do papaléguas', 'italiana') 
-restaurante_pizza.alternar_estado()
-restaurante_macarrao = Restaurante('Macarronada da Dna. Joana', 'Massas em geral') 
-
-Restaurante.listar_restaurantes()
