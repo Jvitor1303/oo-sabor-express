@@ -33,7 +33,7 @@ class Restaurante:
         avaliacao = Avaliacao(cliente, nota)
         self._avaliacao.append(avaliacao)
     
-
+    @property
     def media_avalicaoes(self):
         if not self._avaliacao: 
             return 0 
