@@ -11,8 +11,6 @@ bebida_suco.aplicar_desconto()
 prato_paozinho = Prato('Pãozinho', 2.0, 'O melhor pão da cidade') 
 prato_paozinho.aplicar_desconto() 
 
-sobremesa_sorvete = Sobremesa('Sorvete Napolitano', 10.0, 'Médio', 'Doce')
-
 restaurante_praca.adicionar_no_cardapio(bebida_suco) 
 
 restaurante_praca.adicionar_no_cardapio(prato_paozinho)
